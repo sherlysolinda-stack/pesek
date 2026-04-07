@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kosa Kata Bahasa Tidung Tengara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#ececec;
+    margin:0;
+    padding:15px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+    color:#2c3e50;
+}
+
+/* SEARCH */
+.search-box{
+    max-width:400px;
+    margin:0 auto 20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    font-size:14px;
+    border:2px solid #3498db;
+    border-radius:6px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:#fff;
+    border:2px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border:1px solid #ccc;
+}
+
+.indo{
+    margin-top:8px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.tidung{
+    font-size:13px;
+    color:#555;
+}
+
+button{
+    margin-top:8px;
+    width:100%;
+    padding:8px;
+    background:#3498db;
+    color:white;
+    border:none;
+    font-size:14px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1f78c1;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Kosa Kata Bahasa Tidung Tengara</h1>
+
+<!-- SEARCH -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Cari kosa kata..." onkeyup="cariKata()">
+</div>
+
+<div class="grid" id="daftarKata">
+
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=19alITknxy0nrZjxdc7ul4VzvVtG_YfY0&sz=w600">
+    <div class="indo">Kutu Air</div>
+    <div class="tidung">Nakan Timuk</div>
+    <button onclick="bicara('Nakan Timuk artinya Kutu Air')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1RMa-5MP5cVRpaeAUQ-vCSyKUKk-3gxW0&sz=w600">
+    <div class="indo">Malam</div>
+    <div class="tidung">Kiwon</div>
+    <button onclick="bicara('Kiwon artinya Malam')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=13ss7zKkJyBmqJBklyZtApkFqtMrqpx_u&sz=w600">
+    <div class="indo">Pagi</div>
+    <div class="tidung">Sumpur</div>
+    <button onclick="bicara('Sumpur artinya Pagi')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1ubFKZeQl9ZOGVO07aL6bKE9Dv2xm9Woh&sz=w600">
+    <div class="indo">Lampu</div>
+    <div class="tidung">Pelita</div>
+    <button onclick="bicara('Pelita artinya Lampu')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1VklxCV8Lry330R14zqYcWccuz8DjNHRn&sz=w600">
+    <div class="indo">Diare</div>
+    <div class="tidung">Tumay-Tumay</div>
+    <button onclick="bicara('Tumay-Tumay artinya Diare')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1-k7BGZb3XcoD1DfC8IK-n9JokTQ_QUi2&sz=w600">
+    <div class="indo">Kampung</div>
+    <div class="tidung">Pagun</div>
+    <button onclick="bicara('Pagun artinya Kampung')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1OpZlrUNe7APBcck3Xt_eLaCymm4oAKq_&sz=w600">
+    <div class="indo">Ladang</div>
+    <div class="tidung">Gumo</div>
+    <button onclick="bicara('Damo artinya Ladang')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1pYW3juHfrhT8bb2libZf-OZd97fy4flw&sz=w600">
+    <div class="indo">Sore</div>
+    <div class="tidung">Jalop</div>
+    <button onclick="bicara('Jalop artinya Sore')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=116KVg4hM3_fCfk7ihW7AMjYx8h4vF4f3&sz=w600">
+    <div class="indo">Flu</div>
+    <div class="tidung">Duol Ipon</div>
+    <button onclick="bicara('Duol Ipon artinya Sakit Gigi')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1SXZsVpPgzDUE-5VQ_vX-7kO_Dg_joC6ns&sz=w600">
+    <div class="indo">Mabuk Perjalanan</div>
+    <div class="tidung">Makau Mauk</div>
+    <button onclick="bicara('Makau Mauk artinya Mabuk Perjalanan')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1mGeFcssHQLrwCXz4MviQCPkdgmlYPaaz&sz=w600">
+    <div class="indo">Demam</div>
+    <div class="tidung">Begaran</div>
+    <button onclick="bicara('Begaran artinya Demam')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1Z4jaq_BhHvm9nsp0Vb-ax9u-e2EupWv0&sz=w600">
+    <div class="indo">Bantal</div>
+    <div class="tidung">Ubut</div>
+    <button onclick="bicara('Ubut artinya Bantal')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1335FTbR6zMwE5uqFR0QPMx9nU8YXfkmW&sz=w600">
+    <div class="indo">SungaI</div>
+    <div class="tidung">Ilur</div>
+    <button onclick="bicara('Ilur artinya Sungai')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=13xillH-WA0GwN1JXjmgJPY_tcEtazjRb&sz=w600">
+    <div class="indo">Sakit Kepala</div>
+    <div class="tidung">Duol Utok</div>
+    <button onclick="bicara('Duol Utok artinya Sakit Utok')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=136Ao80WeCZxMV72kTxxeLsZF3coScaLZ&sz=w600">
+    <div class="indo">Kompor</div>
+    <div class="tidung">Kumpur</div>
+    <button onclick="bicara('Kumpur artinya Kumput')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=19owd1cgdyvMntut6L_4ecGMldR6bnuUk&sz=w600">
+    <div class="indo">Gunung</div>
+    <div class="tidung">Tidong</div>
+    <button onclick="bicara('Tidong artinya Tidong')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=14hSvnLHUzAO5-ihRPz6sNMLkwdhoNa9o&sz=w600">
+    <div class="indo">Gerimis</div>
+    <div class="tidung">Belibis</div>
+    <button onclick="bicara('Belibis artinya Belibis')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1A932rOg3f6BeztV1L9eq_MtQVrF3q2IY&sz=w600">
+    <div class="indo">Gelas</div>
+    <div class="tidung">Kaca</div>
+    <button onclick="bicara('Kaca artinya Gelas')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1tqb1T5lIHLHZuXyDVzE1ItdRYihswltt&sz=w600">
+    <div class="indo">Agit</div>
+    <div class="tidung">Kumpol</div>
+    <button onclick="bicara('Kumpol artinya Agit')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1aJIQuzaABz9N0_YtgkIJE0lSZhrGk2bq&sz=w600">
+    <div class="indo">Naul</div>
+    <div class="tidung">Bubur Sagu atau Papeda</div>
+    <button onclick="bicara('Naul artinya Bubur Sagu atau Papeda')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1N_8u346hel1itlt9cmJnC_k76-Gyv-0n&sz=w600">
+    <div class="indo">Ember</div>
+    <div class="tidung">Imbir</div>
+    <button onclick="bicara('Imbir artinya Ember')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1NbCZlzRb7qeb7hGtPX8jrfUH-T0fWsjy&sz=w600">
+    <div class="indo">Pisau</div>
+    <div class="tidung">Lading</div>
+    <button onclick="bicara('Lading artinya Lading')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1-gbgnQ-b7Rtx7jYVfrH7XDSQGAqnq_0a&sz=w600">
+    <div class="indo">Sakit Gigi</div>
+    <div class="tidung">Duol Ipon</div>
+    <button onclick="bicara('Duol Ipon artinya Sakit Gigi')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1qoLURWyAgnsIObfYGhbQOZliDwLrkNhb&sz=w600">
+    <div class="indo">Cermin</div>
+    <div class="tidung">Seramin</div>
+    <button onclick="bicara('Seramin artinya Cermin')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1nc8jwDuGhxj5wtwB5cCfXv4Mb5FO422-&sz=w600">
+    <div class="indo">Hujan</div>
+    <div class="tidung">Dasam</div>
+    <button onclick="bicara('Dasam artinya Hujan')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1pHc7K_O-nhcJrzLQRGRFHX_6xxDC_yhE&sz=w600">
+    <div class="indo">Asma</div>
+    <div class="tidung">Opos</div>
+    <button onclick="bicara('Opos artinya Asma')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1L0-jAFkjpuW0tAnAn5NGs5w2aLeCbuj2&sz=w600">
+    <div class="indo">Batuk</div>
+    <div class="tidung">Usod</div>
+    <button onclick="bicara('Usod artinya Batuk')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1_Zb72GxSrDAPy4IAQBu1psDotK723HPF&sz=w600">
+    <div class="indo">Cacar</div>
+    <div class="tidung">Solong</div>
+    <button onclick="bicara('Solong artinya Cacar')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1a7YcDUK4R4bv27y39jamHzKMGVIOlBNk&sz=w600">
+    <div class="indo">Daun Singkong Rebus</div>
+    <div class="tidung">Sabay Nerabus</div>
+    <button onclick="bicara('Sabay Nerabus artinya Daun Singkong Nerabus')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1auOx8RC-BQrbONLG4AUxLmu8eYFft2m1&sz=w600">
+    <div class="indo">Ikan Bakar</div>
+    <div class="tidung">Pait Teninu</div>
+    <button onclick="bicara('Pait Teninu artinya Ikan Bakar')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=15UezK79dduhdnMy9OeNfDQ3WOQwonjSr&sz=w600">
+    <div class="indo">Ikan baung</div>
+    <div class="tidung">Pait Sopong</div>
+    <button onclick="bicara('Pait Sopong artinya Pait Sopong')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1cZXjr76tQkX4nMwT1KsRPj6-E_QfrQ3Y&sz=w600">
+    <div class="indo">Ikan Gabus</div>
+    <div class="tidung">Pait Berukus</div>
+    <button onclick="bicara('Pait Berukus artinya Ikan Gabus')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1uEXTg5JWD_zwI1TSIGAopASGnLGWfVC5&sz=w600">
+    <div class="indo">Ikan Kakap</div>
+    <div class="tidung">Pait Tembaring</div>
+    <button onclick="bicara('Pait Tembaring artinya Ikan Kakap')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1aknoTCSwDAooWck1gBwjGfN0yxyq5_RB&sz=w600">
+    <div class="indo">Ikan Kuah Kuning</div>
+    <div class="tidung">Penogot</div>
+    <button onclick="bicara('Penogot artinya Ikan Kuah Kuning')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1-6JhZSpRKV_zMuXLYO_tl4x4_hiikpt4&sz=w600">
+    <div class="indo">Ikan Lele</div>
+    <div class="tidung">Pait Balul</div>
+    <button onclick="bicara('Pait balul artinya Ikan Lele')">🔊 Dengar</button>
+</div>
+
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1ObkuFFexpZmA2ZRWa6J7Vm3g6K8JDC2l&sz=w600">
+    <div class="indo">Ikan Otek</div>
+    <div class="tidung">Pait Namung</div>
+    <button onclick="bicara('Pait Namung artinya Ikan Otek')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1WsQ3nDICpJedaRDqpUynbdaX84ec7vvk&sz=w600">
+    <div class="indo">Ikan Patin</div>
+    <div class="tidung">Pait Serodong</div>
+    <button onclick="bicara('Pait Serodong artinya Ikan Serodong')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=18Kudaaelx-okMNDOzzZGTJbVhY9PfS9n&sz=w600">
+    <div class="indo">Ikan Sembilang</div>
+    <div class="tidung">Duol Imbusa</div>
+    <button onclick="bicara('Ikan Imbusa artinya Ikan sembilang')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1vfcgI02_0fRWcm6XmLbxX04jvL2jvwp8&sz=w600">
+    <div class="indo">Langit</div>
+    <div class="tidung">Kuanan</div>
+    <button onclick="bicara('Kuanan artinya Langit')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1OBf-HNCDJN-70kfTy9RBXHipS1d8BxYv&sz=w600">
+    <div class="indo">Lelah</div>
+    <div class="tidung">Payan</div>
+    <button onclick="bicara('Payan artinya Lelah')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1GnYFK1gzMyUQFTvkez13Hil8oh_qGy0x&sz=w600">
+    <div class="indo">Pelangi</div>
+    <div class="tidung">Belitung</div>
+    <button onclick="bicara('Belitung artinya Pelangi')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1kDGTJWwTFJdTBR6LP77ZTHeeAPm1JSqE&sz=w600">
+    <div class="indo">Petir</div>
+    <div class="tidung">Temparit</div>
+    <button onclick="bicara('Temparit artinya Petir')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1GXYa0yrxcNdJQ6YtDNRZruX3p6uK2doO&sz=w600">
+    <div class="indo">Pintu</div>
+    <div class="tidung">Tembangan</div>
+    <button onclick="bicara('Tembangan artinya Pintu')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1qKgiPNvI9rYX6WMMp08OkYrFag_ickw6&sz=w600">
+    <div class="indo">Piring</div>
+    <div class="tidung">Lalay</div>
+    <button onclick="bicara('Lalay artinya Piring')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1F3c94ot8QBsu3j9C9VhmDi3jcHDrOPyO&sz=w600">
+    <div class="indo">Pisang rebus</div>
+    <div class="tidung">Punti Nerabus</div>
+    <button onclick="bicara('Punti Nerabus artinya Pisang Rebus')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1oGgbVfLRsql9vpshnJ3jDPb7Ih_pugNt&sz=w600">
+    <div class="indo">Rumah</div>
+    <div class="tidung">Baloy</div>
+    <button onclick="bicara('Baloy artinya Rumah')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1_rgumhdGKDod1Zy4ReoQwlonTK8jZn_G&sz=w600">
+    <div class="indo">Sakit Mata</div>
+    <div class="tidung">Duol Mato</div>
+    <button onclick="bicara('Duol Mato artinya Sakit Mata')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1Wl4FO6EOoR2Efg__nvvqLRK05RgVoAn2&sz=w600">
+    <div class="indo">Sakit Perut</div>
+    <div class="tidung">Duol Tinai</div>
+    <button onclick="bicara('Duol Tinai artinya Sakit Tinai')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1V46WuPkexPG9-_xJvnWDy0fkdk5_rxe6&sz=w600">
+    <div class="indo">Sakit Pinggang</div>
+    <div class="tidung">Duol Awakk</div>
+    <button onclick="bicara('Duol Awak artinya Sakit Pinggang')">🔊 Dengar</button>
+</div>
+
+<div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1V6qDrtfU_caQEXB5-ffZhGt5b7U7IGSN&sz=w600">
+    <div class="indo">Sendok</div>
+    <div class="tidung">Sanduk</div>
+    <button onclick="bicara('Sanduk artinya Sendok')">🔊 Dengar</button>
+</div>
+
+</div>
+
+<script>
+function bicara(teks){
+    const suara = new SpeechSynthesisUtterance(teks);
+    suara.lang = "id-ID";
+    suara.rate = 0.9;
+    speechSynthesis.speak(suara);
+}
+
+function cariKata(){
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.getElementsByClassName("card");
+
+    for(let i = 0; i < cards.length; i++){
+        const indo = cards[i].getElementsByClassName("indo")[0].innerText.toLowerCase();
+        const tidung = cards[i].getElementsByClassName("tidung")[0].innerText.toLowerCase();
+
+        if(indo.includes(input) || tidung.includes(input)){
+            cards[i].style.display = "";
+        }else{
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
